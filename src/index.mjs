@@ -17,7 +17,7 @@ const onClickAdd = () => {
   const completeButton = document.createElement("button");
   completeButton.innerText = "完了";
   completeButton.addEventListener("click", () => {
-    alert("完了");
+  document.getElementById("complete_list").appendChild(ul);
   });
 
   /* ボタン（削除）タグの生成 */
@@ -29,6 +29,7 @@ const onClickAdd = () => {
     document.getElementById("incomplete_list").removeChild(deleateTarget);
   });
 
+
   /* ulタグの子要素に各要素を設定 */
   ul.appendChild(li);
   ul.appendChild(completeButton);
@@ -38,6 +39,7 @@ const onClickAdd = () => {
   /* 未完了リストに追加 */
   document.getElementById("incomplete_list").appendChild(ul);
 
+  
 }
 
 document.getElementById("add_button")
